@@ -1,0 +1,138 @@
+
+
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+
+        place-items: center;
+
+        gap: 50px;
+
+        margin: 0;
+
+        height: 100vh;
+
+        padding: 0 32px;
+
+        background: #eff9ff;
+
+        font-family: "Poppins";
+      }
+
+      @media (width >= 500px) {
+        body {
+          padding: 0;
+        }
+
+        .card {
+          margin: 0;
+
+          width: 360px;
+        }
+      }
+
+      .background {
+        position: fixed;
+
+        top: -50vmin;
+
+        left: -50vmin;
+
+        width: 100vmin;
+
+        height: 100vmin;
+
+        border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+        background: #65c8ff;
+      }
+
+      .card {
+        overflow: hidden;
+
+        position: relative;
+
+        z-index: 3;
+
+        width: 94%;
+
+        margin: 20px;
+
+        padding: 170px 30px 54px;
+
+        border-radius: 24px;
+
+        background: #ffffff;
+
+        text-align: center;
+
+        box-shadow: 0 100px 100px rgb(000/10%);
+      }
+
+      .card::before {
+        content: "";
+
+        position: absolute;
+
+        top: -880px;
+
+        left: 50%;
+
+        translate: -50% 0;
+
+        width: 1000px;
+
+        height: 1000px;
+
+        border-radius: 50%;
+
+        background: #216ce7;
+      }
+
+      .background::after {
+        content: "";
+
+        position: inherit;
+
+        right: -50vmin;
+
+        bottom: -55vmin;
+
+        width: inherit;
+
+        height: inherit;
+
+        border-radius: inherit;
+
+        background: #143d81;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="card">
+      <form method="POST" action="/user/logged">
+        <h1>login</h1>
+        <!-- <label>UserID</label>
+        <input type="text" name="id" /> -->
+        <label>Username</label>
+        <input type="text" name="username" />
+        <br><br>
+        <label>Email-ID</label>
+        <input type="email" name="emailID" />
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="password" />
+        <br><br>
+        <button>Submit</button>
+      </form>
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

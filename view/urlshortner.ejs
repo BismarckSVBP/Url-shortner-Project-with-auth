@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(60, 132, 200, 0.76);
+      }
+      table{
+        background-color : rgba(169, 203, 35, 0.76) ;
+        width : 100%;
+        table-layout: fixed; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>URL Shortner Website</h1>
+
+    <div>
+      <form method="POST" action="/url">
+        <label
+          ><b><span color="solid black 10px">Enter your URL : </span></b></label
+        >
+        <input type="text" name="url" placeholder=" https://example.com" />
+        <button type="submit">Generate</button>
+        <!-- <br />
+        <br />
+        <label>Your shorted url is : </label> -->
+      </form>
+    </div>
+    <% if (locals.id) { %>
+    <p>URL Genrated : http://localhost:9210/url/<%= id %></p>
+    <% } %>
+
+    <div>
+      <% if (locals.urls) { %>
+      <table border="2px solid black"  >
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>ShortId</th>
+            <th>Redirect</th>
+            <th>Clicks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% urls.forEach((url, index)=> { %>
+            <td><%= index + 1 %></td>
+            <td><%= url.shortId %></td>
+            <td><%= url.redirectURL %></td>
+            <td><%= url.visitHistory.length %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+  </body>
+</html>

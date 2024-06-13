@@ -1,0 +1,215 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecting</title>
+    <style>
+      body {
+        background-image: url(./WhatsApp\ Image\ 2024-05-31\ at\ 14.31.49_28d27a8f.jpg);
+        background-color: rgba(17, 223, 117, 0.3);
+      }
+      .outer {
+        width: 500px;
+        margin: auto;
+      }
+      .login {
+        border: 1px solid black;
+        width: 400px;
+        height: 280px;
+        background: url(./WhatsApp\ Image\ 2024-05-31\ at\ 14.45.33_39c3af8a.jpg);
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+      form {
+        display: block;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 100%;
+        backdrop-filter: brightness(40%);
+        flex-direction: column;
+        display: flex;
+        gap: 5px;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 24px;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        margin-bottom: 60px;
+      }
+      label {
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
+        padding-left: 10px;
+      }
+      input {
+        background: rgba(255, 255, 255, 0.3);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        padding: 0px 20px;
+        border: none;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      button {
+        background: rgb(45, 126, 231);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+        border: none;
+        margin: 10px 0px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        color: white;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><b>Welcome to my site...</b></h1>
+
+    <div class="outer">
+      <div class="login">
+        <form method="GET" action="/homepage">
+          <label class="label"><h1 class="h1">Homepage</h1></label>
+         
+          <button class="button">Submit</button>
+          </form>
+          <b><hr></b>
+      </div>
+    </div>   
+  </body>
+</html> -->
+
+<html>
+  <head>
+    <style>
+      body {
+        display: grid;
+
+        place-items: center;
+
+        gap: 50px;
+
+        margin: 0;
+
+        height: 100vh;
+
+        padding: 0 32px;
+
+        background: #eff9ff;
+
+        font-family: "Poppins";
+      }
+
+      @media (width >= 500px) {
+        body {
+          padding: 0;
+        }
+
+        .card {
+          margin: 0;
+
+          width: 360px;
+        }
+      }
+
+      .background {
+        position: fixed;
+
+        top: -50vmin;
+
+        left: -50vmin;
+
+        width: 100vmin;
+
+        height: 100vmin;
+
+        border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+        background: #65c8ff;
+      }
+
+      card {
+        overflow: hidden;
+
+        position: relative;
+
+        z-index: 3;
+
+        width: 94%;
+
+        margin: 20px;
+
+        padding: 170px 30px 54px;
+
+        border-radius: 24px;
+
+        background: #ffffff;
+
+        text-align: center;
+
+        box-shadow: 0 100px 100px rgb(000/10%);
+      }
+
+      .card::before {
+        content: "";
+
+        position: absolute;
+
+        top: -880px;
+
+        left: 50%;
+
+        translate: -50% 0;
+
+        width: 1000px;
+
+        height: 1000px;
+
+        border-radius: 50%;
+
+        background: #216ce7;
+      }
+
+      .background::after {
+        content: "";
+
+        position: inherit;
+
+        right: -50vmin;
+
+        bottom: -55vmin;
+
+        width: inherit;
+
+        height: inherit;
+
+        border-radius: inherit;
+
+        background: #143d81;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="card">
+      <h2>Welcome Back</h2>
+
+      <form method="GET" action="/homepage">
+        <label class="label"><h1 class="h1">Homepage</h1></label>
+       
+        <button class="button">Submit</button>
+        </form>
+    </div>
+  </body>
+</html>
